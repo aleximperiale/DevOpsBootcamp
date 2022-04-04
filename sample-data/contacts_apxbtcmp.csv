@@ -1,0 +1,16 @@
+firstname,lastname,email,start_date__c,type,external_id,onboarding
+Betsy,Griffin,Betsy.Griffin@uc.com,7/1/21,Employee,CO-000000001,O-0000000001
+Rachael,Mccormick,Rachael.Mccormick@uc.com,7/1/21,Employee,CO-000000002,O-0000000001
+Claire,Patrick,Claire.Patrick@uc.com,7/1/21,Employee,CO-000000003,O-0000000001
+Malcolm,Vega,Malcolm.Vega@uc.com,7/1/21,Employee,CO-000000004,O-0000000001
+Sheldon,Owen,Sheldon.Owen@uc.com,7/1/21,Employee,CO-000000005,O-0000000001
+Margaret,Perry,Margaret.Perry@uc.com,7/1/21,Employee,CO-000000006,O-0000000001
+Herman,Curry,Herman.Curry@uc.com,7/1/21,Employee,CO-000000007,O-0000000001
+Clifton,Doyle,Clifton.Doyle@uc.com,8/1/21,Employee,CO-000000008,O-0000000002
+Darryl,Green,Darryl.Green@uc.com,8/1/21,Employee,CO-000000009,O-0000000002
+Harry,Warren,Harry.Warren@uc.com,8/1/21,Employee,CO-000000010,O-0000000002
+Juana,Clayton,Juana.Clayton@uc.com,8/1/21,Employee,CO-000000011,O-0000000002
+Charlene,Cooper,Charlene.Cooper@uc.com,8/1/21,Employee,CO-000000012,O-0000000002
+Eddie,Murphy,Eddie.Murphy@uc.com,8/1/21,Employee,CO-000000013,O-0000000002
+William,Taylor,William.Taylor@uc.com,8/1/21,Employee,CO-000000014,O-0000000002
+Debra,Chapman,Debra.Chapman@uc.com,8/1/21,Employee,CO-000000015,O-0000000002

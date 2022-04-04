@@ -1,0 +1,36 @@
+h3 {
+    font-size: 1.3em;
+}
+
+hr {
+    margin: 0;
+}
+
+.progress-bar {
+    margin-top: 3px;
+}
+
+.plan-status-farbehind {
+    background-color: #FF3633;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 50px;
+}
+.plan-status-slightlybehind {
+    background-color: #FFCDCC;
+    padding: 5px 10px;
+    color: black;
+    border-radius: 50px;
+}
+.plan-status-onpace {
+    background-color: #AFEFA9;
+    padding: 5px 10px;
+    color: black;
+    border-radius: 50px;
+}
+.plan-status-aheadofpace {
+    background-color: #CCB800;
+    padding: 5px 10px;
+    color: black;
+    border-radius: 50px;
+}

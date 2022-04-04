@@ -1,0 +1,81 @@
+<template>
+    
+    <lightning-layout multiple-rows>
+        <!-- Top -->
+        <lightning-layout-item size="12">
+            <lightning-card>
+                <!-- Loading animation -->
+                <div id="loading" if:true={isLoading}><lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner></div>
+
+                <div id="display" if:false={isLoading} class="slds-p-horizontal_large slds-p-bottom_medium">
+                    <template if:true={onboardingData}>
+                        <div slot="actions" style="float: right;">
+                            <span if:true={isFarBehind} class="plan-status-farbehind">{onboardingData.status}</span>
+                            <span if:true={isSlightlyBehind} class="plan-status-slightlybehind">{onboardingData.status}</span>
+                            <span if:true={isOnPace} class="plan-status-onpace">{onboardingData.status}</span>
+                            <span if:true={isAheadOfPace} class="plan-status-aheadofpace">{onboardingData.status}</span>
+                        </div>
+    
+                        <h3 slot="title" class="slds-p-bottom_small">
+                            <lightning-icon icon-name="custom:custom48" size="small" class="slds-m-right_x-small"></lightning-icon>
+                            {onboardingData.name}
+                        </h3>
+    
+                        <hr />
+
+
+                        <lightning-layout multiple-rows>
+                            <!-- Target progress bar -->
+                            <lightning-layout-item size="12" class="slds-text-align_left slds-p-top_small slds-p-bottom_xx-small">
+                                <strong>Target:</strong>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="11" class="slds-text-align_left slds-p-bottom_small">
+                                <lightning-progress-bar value={progressTarget} size="large" variant="circular"></lightning-progress-bar>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="1" class="slds-text-align_center slds-p-bottom_small">
+                                <span>{progressTarget}%</span>
+                            </lightning-layout-item>
+
+                            <!-- Actual progress bar -->
+                            <lightning-layout-item size="12" class="slds-text-align_left slds-p-top_x-small slds-p-bottom_xx-small">
+                                <strong>Actual:</strong>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="11" class="slds-text-align_left slds-p-bottom_small">
+                                <lightning-progress-bar value={progressActual} size="large" variant="circular"></lightning-progress-bar>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="1" class="slds-text-align_center slds-p-bottom_small">
+                                <span>{progressActual}%</span>
+                            </lightning-layout-item>
+
+                            <!-- Onboarding stats -->
+                            <lightning-layout-item size="12" class="slds-text-align_left slds-p-top_x-small slds-p-bottom_small">
+                                <lightning-layout>
+                                    <lightning-layout-item size="2" class="slds-text-align_left">
+                                        <lightning-input type="text" label="Plan Start Date" value={onboardingStartDate} readonly></lightning-input>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="2" class="slds-text-align_left">
+                                        <lightning-input type="text" label="Plan End Date" value={onboardingEndDate} readonly></lightning-input>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="2" class="slds-text-align_left">
+                                        <lightning-input type="text" label="Ahead / Behind" value={onboardingData.aheadBehind} readonly></lightning-input>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="2" class="slds-text-align_left">
+                                        <lightning-input type="text" label="Week No." value={onboardingData.weekNo} readonly></lightning-input>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="2" class="slds-text-align_left">
+                                        <lightning-input type="text" label="Minutes Achieved" value={onboardingData.achieved} readonly></lightning-input>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="2" class="slds-text-align_left">
+                                        <lightning-input type="text" label="Target Minutes" value={onboardingData.target} readonly></lightning-input>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+                            </lightning-layout-item>
+
+                        </lightning-layout>
+
+                    </template>
+                </div>
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

@@ -48,7 +48,6 @@ public with sharing class EmployeeTriggerHandlerTest {
             SELECT Id, FirstName, LastName,
             (SELECT Id, Onboarding_Activity__r.Onboarding__c FROM Activity_Assignments__r)
             FROM Contact
-            ORDER BY LastName
         ]);
 
         // Check for expected number of assignments for each contact

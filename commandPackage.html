@@ -1,9 +1,10 @@
-    org/auth commands*
+    org/auth commands
+        sfdx force:auth:web:login -a OrgAlias
         sfdx force:org:display
         sfdx force:org:list
-    deployment commands*
+    deployment commands
         sfdx force:source:deploy -u devOps -g -w 60 --checkonly -x manifest/package.xml --testlevel NoTestRun
         sfdx force:source:deploy -u devOps -g -w 60 --checkonly -x manifest/package.xml --testlevel RunLocalTests
         sfdx force:source:deploy -u devOps -g -w 60 -x manifest/package.xml --testlevel NoTestRun
-    verifying deployment commands:*
-        sfdx force:source:deploy:report -i 0AfIY000000PAan -u devOps --json > /Users/aimperiale/Desktop/DevOpsBootcamp/ReleaseEvidence/release20220426-deployment-evidence.txt
+    verifying deployment commands:
+        sfdx force:source:deploy:report -i 0AfIY000000PAan -u devOps --json > /Users/aimperiale/Desktop/DevOpsBootcamp/ReleaseEvidence/release20220607-deployment-evidence.txt
